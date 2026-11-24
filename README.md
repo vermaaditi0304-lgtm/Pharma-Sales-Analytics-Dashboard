@@ -33,7 +33,7 @@ Four relational tables:
 | `rep_dataset.csv` | one row per rep | 15 | `Rep_ID`, `Region`, `Calls_Made`, `Meetings` |
 | `territory_dataset.csv` | one row per region | 8 | `Region`, `Manager` |
 
-`sales_dataset` also includes `stock_level`, `expiry_days_remaining`, and `covid_flag` — present in the raw data but not currently used in any KPI or visual (see [Future Improvements](#-future-improvements)).
+`sales_dataset` also includes `stock_level`, `expiry_days_remaining`, and `covid_flag` — present in the raw data but not currently used in any KPI or visual.
 
 **Key stats:** ₹232.24M total revenue · 4.47M units sold · 100 doctors · 15 reps · 8 regions · 5 categories · 2020–2025.
 
@@ -114,7 +114,7 @@ Run against the four tables using CTEs and window functions:
 1. **2022 revenue drop:** Annual revenue peaked in 2021 (₹52.3M) then fell ~38% in 2022 (₹32.3M), staying flat through 2025. The drop is broad-based — every region and category declined by a similar magnitude — driven by lower units sold per transaction, not price or call-volume changes. Given the uniformity, this more likely reflects a change in how the synthetic data was generated than a real business event.
 2. **Regional and category revenue are fairly balanced** — the top and bottom regions/categories differ by roughly 10%, not a dominant outlier.
 3. **Top doctors form a tight cluster**, not a single point of dependency — the top 4–5 doctors by revenue are within ~3% of each other.
-4. **Revenue per Call is a company-wide estimate**, not a true per-rep metric (see [Data Model](#-data-model)).
+4. **Revenue per Call is a company-wide estimate**, not a true per-rep metric.
 
 ---
 
